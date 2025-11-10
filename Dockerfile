@@ -21,6 +21,7 @@ RUN wget -q https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.2/post
 RUN mkdir -p /opt/warehouse
 
 # Configura variáveis de ambiente do Spark
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64
 ENV SPARK_HOME=/opt/spark-3.3.0-bin-hadoop3
 ENV PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 ENV PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH
